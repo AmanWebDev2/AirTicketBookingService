@@ -26,6 +26,16 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ENUM,
       defaultValue: "InProcess",
       values: ['InProcess','Booked','Cancelled']
+    },
+    totalCost: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0
+    },
+    noOfSeats: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 1
     }
   }, {
     sequelize,
